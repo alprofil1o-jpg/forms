@@ -1,122 +1,23 @@
-<!DOCTYPE html>
-<html lang="hu">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>3D nyomtatott termékek rendelése</title>
+
+<!DOCTYPE html><html lang="hu"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>3D Nyomtatás Rendelés</title>
 <style>
-body{font-family:Arial,sans-serif;max-width:900px;margin:30px auto;padding:20px}
-.product{border:1px solid #ccc;border-radius:8px;padding:16px;margin:16px 0}
-.placeholder{width:220px;height:160px;border:2px dashed #999;display:flex;align-items:center;justify-content:center;color:#666;margin-bottom:10px}
-label{display:block;margin:10px 0 4px}
-input,select{padding:8px;width:100%;max-width:350px}
-button{padding:12px 24px;font-size:16px}
-</style>
-</head>
-<body>
+body{margin:0;background:#f4f6f9;font-family:Arial,sans-serif}
+.container{max-width:950px;margin:40px auto;background:#fff;padding:30px;border-radius:16px;
+box-shadow:0 10px 30px rgba(0,0,0,.12)}
+h1{text-align:center;color:#1f4e79}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.card{border:1px solid #ddd;border-radius:12px;padding:15px;background:#fafafa}
+.img{height:160px;border:2px dashed #bbb;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#777;background:white}
+label{display:block;margin:10px 0 5px;font-weight:bold}
+input,select{width:100%;padding:10px;border:1px solid #ccc;border-radius:8px}
+button{margin-top:25px;width:100%;padding:14px;border:none;border-radius:10px;background:#1f4e79;color:#fff;font-size:18px;cursor:pointer}
+button:hover{background:#163b5c}
+</style></head><body><div class="container">
 <h1>3D nyomtatott termékek rendelése</h1>
-
-<label>Név</label><input type="text" name="nev">
-<label>Telefonszám</label><input type="tel" name="telefon">
-<label>E-mail</label><input type="email" name="email">
-
-<div class="product">
-<h2>Termék 1</h2>
-<div class="placeholder">Kép helye</div>
-<label>Darabszám</label>
-<select name="termek1">
-<option>0</option><option>1</option><option>2</option>
-<option>3</option><option>4</option><option>5</option>
-</select>
-</div>
-
-<div class="product">
-<h2>Termék 2</h2>
-<div class="placeholder">Kép helye</div>
-<label>Darabszám</label>
-<select name="termek2">
-<option>0</option><option>1</option><option>2</option>
-<option>3</option><option>4</option><option>5</option>
-</select>
-</div>
-
-<div class="product">
-<h2>Termék 3</h2>
-<div class="placeholder">Kép helye</div>
-<label>Darabszám</label>
-<select name="termek3">
-<option>0</option><option>1</option><option>2</option>
-<option>3</option><option>4</option><option>5</option>
-</select>
-</div>
-
-<div class="product">
-<h2>Termék 4</h2>
-<div class="placeholder">Kép helye</div>
-<label>Darabszám</label>
-<select name="termek4">
-<option>0</option><option>1</option><option>2</option>
-<option>3</option><option>4</option><option>5</option>
-</select>
-</div>
-
-<div class="product">
-<h2>Termék 5</h2>
-<div class="placeholder">Kép helye</div>
-<label>Darabszám</label>
-<select name="termek5">
-<option>0</option><option>1</option><option>2</option>
-<option>3</option><option>4</option><option>5</option>
-</select>
-</div>
-
-<div class="product">
-<h2>Termék 6</h2>
-<div class="placeholder">Kép helye</div>
-<label>Darabszám</label>
-<select name="termek6">
-<option>0</option><option>1</option><option>2</option>
-<option>3</option><option>4</option><option>5</option>
-</select>
-</div>
-
-<div class="product">
-<h2>Termék 7</h2>
-<div class="placeholder">Kép helye</div>
-<label>Darabszám</label>
-<select name="termek7">
-<option>0</option><option>1</option><option>2</option>
-<option>3</option><option>4</option><option>5</option>
-</select>
-</div>
-
-<div class="product">
-<h2>Termék 8</h2>
-<div class="placeholder">Kép helye</div>
-<label>Darabszám</label>
-<select name="termek8">
-<option>0</option><option>1</option><option>2</option>
-<option>3</option><option>4</option><option>5</option>
-</select>
-</div>
-
-<div class="product">
-<h2>Termék 9</h2>
-<div class="placeholder">Kép helye</div>
-<label>Darabszám</label>
-<select name="termek9">
-<option>0</option><option>1</option><option>2</option>
-<option>3</option><option>4</option><option>5</option>
-</select>
-</div>
-
-<div class="product">
-<h2>Termék 10</h2>
-<div class="placeholder">Kép helye</div>
-<label>Darabszám</label>
-<select name="termek10">
-<option>0</option><option>1</option><option>2</option>
-<option>3</option><option>4</option><option>5</option>
-</select>
-</div>
-<button type="submit">Küldés</button></body></html>
+<label>Név</label><input>
+<label>Telefonszám</label><input>
+<label>E-mail</label><input>
+<div class="grid">
+<div class="card"><h3>Termék 1</h3><div class="img">Kép helye</div><label>Darabszám</label><select><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div><div class="card"><h3>Termék 2</h3><div class="img">Kép helye</div><label>Darabszám</label><select><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div><div class="card"><h3>Termék 3</h3><div class="img">Kép helye</div><label>Darabszám</label><select><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div><div class="card"><h3>Termék 4</h3><div class="img">Kép helye</div><label>Darabszám</label><select><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div><div class="card"><h3>Termék 5</h3><div class="img">Kép helye</div><label>Darabszám</label><select><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div><div class="card"><h3>Termék 6</h3><div class="img">Kép helye</div><label>Darabszám</label><select><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div><div class="card"><h3>Termék 7</h3><div class="img">Kép helye</div><label>Darabszám</label><select><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div><div class="card"><h3>Termék 8</h3><div class="img">Kép helye</div><label>Darabszám</label><select><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div><div class="card"><h3>Termék 9</h3><div class="img">Kép helye</div><label>Darabszám</label><select><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div><div class="card"><h3>Termék 10</h3><div class="img">Kép helye</div><label>Darabszám</label><select><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div></div><button>Küldés</button></div></body></html>
