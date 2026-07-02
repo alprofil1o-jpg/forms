@@ -1,23 +1,180 @@
-
-<!DOCTYPE html><html lang="hu"><head><meta charset="UTF-8">
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>3D Nyomtatás Rendelés</title>
+
 <style>
-body{margin:0;background:#f4f6f9;font-family:Arial,sans-serif}
-.container{max-width:950px;margin:40px auto;background:#fff;padding:30px;border-radius:16px;
-box-shadow:0 10px 30px rgba(0,0,0,.12)}
-h1{text-align:center;color:#1f4e79}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
-.card{border:1px solid #ddd;border-radius:12px;padding:15px;background:#fafafa}
-.img{height:160px;border:2px dashed #bbb;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#777;background:white}
-label{display:block;margin:10px 0 5px;font-weight:bold}
-input,select{width:100%;padding:10px;border:1px solid #ccc;border-radius:8px}
-button{margin-top:25px;width:100%;padding:14px;border:none;border-radius:10px;background:#1f4e79;color:#fff;font-size:18px;cursor:pointer}
-button:hover{background:#163b5c}
-</style></head><body><div class="container">
+body{
+    margin:0;
+    background:#f4f6f9;
+    font-family:Arial,sans-serif;
+}
+
+.container{
+    max-width:950px;
+    margin:40px auto;
+    background:#fff;
+    padding:30px;
+    border-radius:16px;
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+}
+
+h1{
+    text-align:center;
+    color:#1f4e79;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:18px;
+    margin-top:20px;
+}
+
+.card{
+    border:1px solid #ddd;
+    border-radius:12px;
+    padding:15px;
+    background:#fafafa;
+}
+
+.img{
+    height:160px;
+    border:2px dashed #bbb;
+    border-radius:8px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#777;
+    background:white;
+}
+
+label{
+    display:block;
+    margin:10px 0 5px;
+    font-weight:bold;
+}
+
+input,select{
+    width:100%;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    box-sizing:border-box;
+}
+
+button{
+    margin-top:25px;
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:#1f4e79;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#163b5c;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
 <h1>3D nyomtatott termékek rendelése</h1>
-<label>Név</label><input>
-<label>Telefonszám</label><input>
-<label>E-mail</label><input>
-<div class="grid">
-<div class="card"><h3>Termék 1</h3><div class="img">Kép helye</div><label>Darabszám</label><select><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div><div class="card"><h3>Termék 2</h3><div class="img">Kép helye</div><label>Darabszám</label><select><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div><div class="card"><h3>Termék 3</h3><div class="img">Kép helye</div><label>Darabszám</label><select><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div><div class="card"><h3>Termék 4</h3><div class="img">Kép helye</div><label>Darabszám</label><select><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div><div class="card"><h3>Termék 5</h3><div class="img">Kép helye</div><label>Darabszám</label><select><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div><div class="card"><h3>Termék 6</h3><div class="img">Kép helye</div><label>Darabszám</label><select><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div><div class="card"><h3>Termék 7</h3><div class="img">Kép helye</div><label>Darabszám</label><select><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div><div class="card"><h3>Termék 8</h3><div class="img">Kép helye</div><label>Darabszám</label><select><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div><div class="card"><h3>Termék 9</h3><div class="img">Kép helye</div><label>Darabszám</label><select><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div><div class="card"><h3>Termék 10</h3><div class="img">Kép helye</div><label>Darabszám</label><select><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div></div><button>Küldés</button></div></body></html>
+
+<label>Név</label>
+<input id="nev">
+
+<label>Telefonszám</label>
+<input id="telefon">
+
+<label>E-mail</label>
+<input id="email">
+
+<div class="grid" id="products"></div>
+
+<button onclick="kuldes()">Rendelés elküldése</button>
+
+</div>
+
+<script>
+
+// 🔧 TERMÉKEK GENERÁLÁSA
+const products = document.getElementById("products");
+
+for (let i = 1; i <= 10; i++) {
+    products.innerHTML += `
+    <div class="card">
+        <h3>Termék ${i}</h3>
+
+        <div class="img">Kép helye</div>
+
+        <label>Darabszám</label>
+        <select id="termek${i}">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+    </div>
+    `;
+}
+
+// 🚀 KÜLDÉS AZ APPS SCRIPTBE
+function kuldes(){
+
+    const adat = {
+        nev: document.getElementById("nev").value,
+        telefon: document.getElementById("telefon").value,
+        email: document.getElementById("email").value,
+
+        termek1: document.getElementById("termek1").value,
+        termek2: document.getElementById("termek2").value,
+        termek3: document.getElementById("termek3").value,
+        termek4: document.getElementById("termek4").value,
+        termek5: document.getElementById("termek5").value,
+        termek6: document.getElementById("termek6").value,
+        termek7: document.getElementById("termek7").value,
+        termek8: document.getElementById("termek8").value,
+        termek9: document.getElementById("termek9").value,
+        termek10: document.getElementById("termek10").value
+    };
+
+    fetch("https://script.google.com/macros/s/AKfycbxA_MTVMEQ4BKUGrh9g-7-lr4ywRnsI8OvM42Sk4lTTl6FxnLYR0HX2qUVcVfg6aTs/exec", {
+        method: "POST",
+        redirect: "follow",
+        body: JSON.stringify(adat)
+    })
+    .then(r => r.text())
+    .then(res => {
+        alert("Sikeres rendelés!");
+
+        // reset
+        document.getElementById("nev").value = "";
+        document.getElementById("telefon").value = "";
+        document.getElementById("email").value = "";
+
+        for (let i = 1; i <= 10; i++) {
+            document.getElementById("termek" + i).value = "0";
+        }
+    })
+    .catch(err => {
+        console.log(err);
+        alert("Hiba történt a küldés során!");
+    });
+
+}
+
+</script>
+
+</body>
+</html>
