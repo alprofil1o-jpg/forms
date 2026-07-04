@@ -239,7 +239,7 @@ function kuldes(){
         adat["termek"+i+"_szin2"] = document.getElementById("szin2_"+i).value;
     }
 
-    fetch("https://script.google.com/macros/s/AKfycbwM8rGZxdMzDB-WqJM287sugSJ24vH3HwbBIhG_DpTjX-RlfGgCP_xla4YfoH7OPrUV/exec", {
+    fetch("https://script.google.com/macros/s/AKfycbzeIbtZSmJ0Rfg88cai-Sd1Ko4WqR5Bs9pOcO65UamT8DhEVo2Jf-bPhbabfsCOtz17tA/exec", {
         method: "POST",
         body: new URLSearchParams({
             data: JSON.stringify(adat)
