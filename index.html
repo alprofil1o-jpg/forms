@@ -132,7 +132,7 @@ const szinek=["fehér","fekete","piros","kék","zöld","arany","sárga","szürke
 // A képeket tedd egy "kepek" mappába a html mellé, és itt írd be a fájlnevüket.
 // Példa: 1 = porgenytű  ->  { id:1, nev:"Porgenytű", kep:"kepek/porgenytu.jpg" }
 const termekLista = [
-    { id:1, nev:"Porgenytű", kep:"kepek/1.jpg" },
+    { id:1, nev:"Termék 1", kep:"kepek/1.jpg" },
     { id:2, nev:"Termék 2", kep:"kepek/2.jpg" },
     { id:3, nev:"Termék 3", kep:"kepek/3.jpg" },
     { id:4, nev:"Termék 4", kep:"kepek/4.jpg" },
@@ -141,7 +141,14 @@ const termekLista = [
     { id:7, nev:"Termék 7", kep:"kepek/7.jpg" },
     { id:8, nev:"Termék 8", kep:"kepek/8.jpg" },
     { id:9, nev:"Termék 9", kep:"kepek/9.jpg" },
-    { id:10, nev:"Termék 10", kep:"kepek/10.jpg" }
+    { id:10, nev:"Termék 10", kep:"kepek/10.jpg" },
+    { id:11, nev:"Termék 11", kep:"kepek/11.jpg" },
+    { id:12, nev:"Termék 12", kep:"kepek/12.jpg" },
+    { id:13, nev:"Termék 13", kep:"kepek/13.jpg" },
+    { id:14, nev:"Termék 14", kep:"kepek/14.jpg" },
+    { id:15, nev:"Termék 15", kep:"kepek/15.jpg" },
+    { id:16, nev:"Termék 16", kep:"kepek/16.jpg" },
+
 ];
 // ==========================
 
@@ -173,7 +180,7 @@ function termekValtozott(i){
     }
 }
 
-for(let i=1;i<=10;i++){
+for(let i=1;i<=9;i++){
 
     let html=`
     <div class="card">
